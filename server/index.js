@@ -3,7 +3,7 @@
  import bodyParser from "body-parser";
  import cors from "cors"
  import dotenv from "dotenv"
-//  import route from './routes/'
+ import route from './routes/UserRoute.js'
 
  const app =express();
  app.use(bodyParser.json());
@@ -21,3 +21,4 @@
  }).catch((err)=>{
     console.log("Error",err.toString())
  })
+ app.use("/api",route)
